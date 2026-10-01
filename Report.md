@@ -127,7 +127,4 @@ The `parking` package contains **5 classes**.
 
 # D) Individual Contribution
 
-| Member Name | ID | Tasks Done | Contribution (%) |
-|-------------|----|------------|------------------|
-| | | | |
-| | | | |
+I contributed to the testing phase by preparing and executing test cases, identifying functional and usability issues, verifying system outputs against expected results, and documenting the observed errors. I also assisted in debugging and retesting the corrected modules to ensure that the system performed reliably and met the specified requirements.
