@@ -9,6 +9,7 @@
 
 # Test Case Table
 
+
 | TC-001 | BookingTest | `constructorSetsAllFields()` | All booking fields are initialized with the supplied values. |
 | TC-002 | BookingTest | `newBookingStartsAsActive()` | A new booking has `ACTIVE` status. |
 | TC-003 | BookingTest | `completeBookingSetsStatusToCompleted()` | Completing a booking changes status to `COMPLETED`. |
@@ -95,6 +96,8 @@
 | TC-084 | WalletTest | `testTransferInsufficientFunds()` | Insufficient transfer throws `InsufficientFundsException` and both balances remain unchanged. |
 | TC-085 | WalletTest | `testTransferZeroFunds()` | Transferring zero funds throws `InvalidAmountException`. |
 | TC-086 | WalletTest | `testTransferNegativeFunds()` | Transferring negative funds throws `InvalidAmountException`. |
+
+
 
 # B) Defects List
 
