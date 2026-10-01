@@ -109,16 +109,21 @@
 
 # C) Mutant Analysis
 
-| Mutant ID | Mutation Applied | Location (File / Line) | Killed / Survived | Test Case That Killed It |
-|-----------|------------------|------------------------|-------------------|--------------------------|
-| M-01 | | | | |
-| M-02 | | | | |
+## Summary
 
-**Mutation Score:** killed mutants / total mutants = 
+The `parking` package contains **5 classes**.
 
-**Summary:** 
+- **Line Coverage:** 95% (`161/170`)
+- **Mutation Coverage:** 81% (`81/100`)
+- **Test Strength:** 89% (`81/91`)
 
----
+### Class-wise Coverage
+
+- **Booking.java:** 100% line coverage, 100% mutation coverage, and 100% test strength.
+- **ParkingSlot.java:** 100% line coverage, 84% mutation coverage, and 84% test strength.
+- **ParkingSystem.java:** 88% line coverage, 66% mutation coverage, and 88% test strength.
+- **Vehicle.java:** 100% line coverage, 100% mutation coverage, and 100% test strength.
+- **Wallet.java:** 100% line coverage, 93% mutation coverage, and 93% test strength.
 
 # D) Individual Contribution
 
