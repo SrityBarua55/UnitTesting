@@ -9,8 +9,6 @@
 
 # Test Case Table
 
-| TC ID | Test Class | Test Case | Expected Result |
-|---|---|---|---|
 | TC-001 | BookingTest | `constructorSetsAllFields()` | All booking fields are initialized with the supplied values. |
 | TC-002 | BookingTest | `newBookingStartsAsActive()` | A new booking has `ACTIVE` status. |
 | TC-003 | BookingTest | `completeBookingSetsStatusToCompleted()` | Completing a booking changes status to `COMPLETED`. |
@@ -100,13 +98,20 @@
 
 # B) Defects List
 
-| Defect ID | Related Test Case | Description | Severity | Status | Fix / Notes |
-|-----------|-------------------|-------------|----------|--------|-------------|
-| D-01 | | | | | |
-| D-02 | | | | | |
+Defect id:TC-003
+Description: Invalid state transitions are allowed (the tests lock in the bug)
 
----
+Defect id:TC-005
+Description:COMPLETED -> CANCELLED, no error
 
+Defect id:TC-002
+Description:End time before start time is accepted
+
+Defect id:TC-001
+Description:Negative or invalid amount is accepted
+
+Defect id:TC-001
+Description:Null values are accepted
 # C) Mutant Analysis
 
 ## Summary
