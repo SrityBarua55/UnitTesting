@@ -176,7 +176,7 @@ Defect ID: T-066
 Description:Invalid initial balance is not checked
 
 Defect ID: T-065
-Description:No `equals()` and `hashCode()`, so duplicate vehicles are not detected
+Description:No equals() and hashCode(), so duplicate vehicles are not detected
 
 
 
