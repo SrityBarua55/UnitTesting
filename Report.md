@@ -103,73 +103,99 @@
 
 # B) Defects List
 
-### Defect id:T-003
-Description: Invalid state transitions are allowed (the tests lock in the bug)
+##Booking
 
-### Defect id:T-005
-Description:COMPLETED -> CANCELLED, no error
+Defect id:T-003
+Description: Invalid state transitions are allowed (the tests lock in the bug).
 
-### Defect id:T-002
-Description:End time before start time is accepted
+Defect id:T-005
+Description:COMPLETED -> CANCELLED, no error.
 
-### Defect id:T-001
-Description:Negative or invalid amount is accepted
+Defect id:T-002
+Description:End time before start time is accepted.
 
-### Defect id:T-001
-Description:Null values are accepted
+Defect id:T-001
+Description:Negative or invalid amount is accepted.
 
-### Defect ID: T-69
+Defect id:T-001
+Description:Null values are accepted.
 
-Vehicle v = new Vehicle(101, VehicleType.CAR, null);
-v.getBalance();
-v.toString();
 
+
+
+##ParkingSlot
+
+Defect id:T-012
+Description:Cancelled booking still block the slot.
+
+Defect id:T-018
+Description:Invalid or null time ranges are not checked.
+
+Defect id:T-010
+Description:An inactive slot reports itself as available.
+
+Defect id:T-009
+Description:The constructor accepts invalid values.
+
+Defect id:T-019
+Description:Missing break in the MICROCAR case.
+
+
+ 
+##ParkingSystem
+
+Defect id:T-047
+Description:partial hours are not charged.
+
+Defect id:T-049
+Description:Trucks can never park.
+
+Defect id:T-051
+Description:complete have no state guard.
+
+Defect id:T-050
+Description:cancel,have no state guard.
+
+Defect id:T-061
+Description:An invalid parking rate is accepted.
+
+
+
+##Vehicle
+
+Defect ID: T-069
 Description:Null wallet is accepted.
 
-### Defect ID: T-68
-
-Vehicle v = new Vehicle(1, null, 100.0);
-v.toString();
-system.getAvailableParkingSlots(v, start, end);
-
+Defect ID: T-068
 Description:Null vehicle type is accepted.
 
-### Defect ID: T-71
+Defect ID: T-071
+Description:Zero or negative vehicle ID is accepted.
 
-new Vehicle(0, VehicleType.CAR, 100.0); new Vehicle(-5, VehicleType.CAR, 100.0);
+Defect ID: T-066
+Description:Invalid initial balance is not checked
 
-Description:Zero or negative vehicle ID is accepted
-
-### Defect ID: T-076
-
-
-void testInitialBalance() { Wallet wallet = new Wallet(-100.0); assertEquals(-100.0, wallet.getBalance()); }
-
-this is a real bug depends on your specification. If your requirements say initial balance must be non-negative, then this is definitely a bug.
-
-### Defect ID: T-074
-Wallet w = new Wallet(100.0); w.addFunds(Double.POSITIVE_INFINITY);
-
-Wallet a = new Wallet(Double.MAX_VALUE); Wallet b = new Wallet(Double.MAX_VALUE); a.transferFunds(b, Double.MAX_VALUE);
-
-Infinite amounts and overflow are accepted
-
-### Defect ID: T-082
-Wallet from = new Wallet(100.0); from.transferFunds(null, 30.0);
-from.getBalance();
-
-transferFunds(null, amount) destroys money
-
-### Defect ID: T-078
-wallet.addFunds(0.1); wallet.addFunds(0.2);
-
- Here the deduction actually works fine (since 0.30000000000000004 >= 0.3 is true), but getBalance() afterward won't be exactly 0.0 — it'll be a tiny residual like 4.44E-17.
-
-### Defect ID: T-079
+Defect ID: T-065
+Description:No `equals()` and `hashCode()`, so duplicate vehicles are not detected
 
 
-assertEquals(0.3, wallet.getBalance()); }
 
+
+##Wallet
+
+Defect ID: T-076
+Description:This is a real bug depends on specification.If the requirements say initial balance must be non-negative ,then this is definitely a bug.
+
+Defect ID: T-074
+Description:Infinite amounts and overflow are accepted.
+
+Defect ID: T-082
+Description:transferFunds(null, amount) destroys money.
+
+Defect ID: T-078
+Description:Here the deduction actually works fine (since 0.30000000000000004 >= 0.3 is true), but getBalance() afterward won't be exactly 0.0 — it'll be a tiny residual like 4.44E-17.
+
+Defect ID: T-079
 Description: 0.1 + 0.2 in double arithmetic equals 0.30000000000000004, not 0.3.
 
 
